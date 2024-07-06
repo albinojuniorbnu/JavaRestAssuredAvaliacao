@@ -33,7 +33,7 @@ public class UsersApiTest {
 
         // Act
         // Realiza a requisição POST
-        Response response = usersApiPage.postUsers(user);;
+        Response response = usersApiPage.postUsers(user);
         response.then().statusCode(201);
 
         // Assert
@@ -52,7 +52,7 @@ public class UsersApiTest {
 
         // Act
         // Realiza a requisição PUT
-        Response response = usersApiPage.putUsersId(updatedUser, 5);;
+        Response response = usersApiPage.putUsersId(updatedUser, 5);
         response.then().statusCode(200)
         .body("email", equalTo("testes@example.com"))
                 .body("address.geo.lat", equalTo("-31.8129"))
